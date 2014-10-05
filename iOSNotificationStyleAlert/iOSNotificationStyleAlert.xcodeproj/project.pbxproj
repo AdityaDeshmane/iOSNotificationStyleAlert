@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2FCDE8019E1814900E97F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE7F19E1814900E97F0D /* Foundation.framework */; };
+		B2FCDE8219E1814900E97F0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE8119E1814900E97F0D /* CoreGraphics.framework */; };
+		B2FCDE8419E1814900E97F0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE8319E1814900E97F0D /* UIKit.framework */; };
+		B2FCDE8A19E1814900E97F0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2FCDE8819E1814900E97F0D /* InfoPlist.strings */; };
+		B2FCDE8C19E1814900E97F0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDE8B19E1814900E97F0D /* main.m */; };
+		B2FCDE9019E1814900E97F0D /* ADAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDE8F19E1814900E97F0D /* ADAppDelegate.m */; };
+		B2FCDE9319E1814900E97F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FCDE9119E1814900E97F0D /* Main.storyboard */; };
+		B2FCDE9619E1814900E97F0D /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDE9519E1814900E97F0D /* ADViewController.m */; };
+		B2FCDE9819E1814900E97F0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FCDE9719E1814900E97F0D /* Images.xcassets */; };
+		B2FCDE9F19E1814900E97F0D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE9E19E1814900E97F0D /* XCTest.framework */; };
+		B2FCDEA019E1814900E97F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE7F19E1814900E97F0D /* Foundation.framework */; };
+		B2FCDEA119E1814900E97F0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FCDE8319E1814900E97F0D /* UIKit.framework */; };
+		B2FCDEA919E1814900E97F0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2FCDEA719E1814900E97F0D /* InfoPlist.strings */; };
+		B2FCDEAB19E1814900E97F0D /* iOSNotificationStyleAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDEAA19E1814900E97F0D /* iOSNotificationStyleAlertTests.m */; };
+		B2FCDEBA19E1825A00E97F0D /* ADCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FCDEB919E1825A00E97F0D /* ADCustomAlertViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2FCDEA219E1814900E97F0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2FCDE7419E1814800E97F0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2FCDE7B19E1814800E97F0D;
+			remoteInfo = iOSNotificationStyleAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2FCDE7C19E1814900E97F0D /* iOSNotificationStyleAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNotificationStyleAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FCDE7F19E1814900E97F0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2FCDE8119E1814900E97F0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B2FCDE8319E1814900E97F0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B2FCDE8719E1814900E97F0D /* iOSNotificationStyleAlert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSNotificationStyleAlert-Info.plist"; sourceTree = "<group>"; };
+		B2FCDE8919E1814900E97F0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2FCDE8B19E1814900E97F0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2FCDE8D19E1814900E97F0D /* iOSNotificationStyleAlert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSNotificationStyleAlert-Prefix.pch"; sourceTree = "<group>"; };
+		B2FCDE8E19E1814900E97F0D /* ADAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADAppDelegate.h; sourceTree = "<group>"; };
+		B2FCDE8F19E1814900E97F0D /* ADAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADAppDelegate.m; sourceTree = "<group>"; };
+		B2FCDE9219E1814900E97F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2FCDE9419E1814900E97F0D /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
+		B2FCDE9519E1814900E97F0D /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
+		B2FCDE9719E1814900E97F0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2FCDE9D19E1814900E97F0D /* iOSNotificationStyleAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNotificationStyleAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FCDE9E19E1814900E97F0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B2FCDEA619E1814900E97F0D /* iOSNotificationStyleAlertTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSNotificationStyleAlertTests-Info.plist"; sourceTree = "<group>"; };
+		B2FCDEA819E1814900E97F0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2FCDEAA19E1814900E97F0D /* iOSNotificationStyleAlertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNotificationStyleAlertTests.m; sourceTree = "<group>"; };
+		B2FCDEB819E1825A00E97F0D /* ADCustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCustomAlertViewController.h; sourceTree = "<group>"; };
+		B2FCDEB919E1825A00E97F0D /* ADCustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCustomAlertViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2FCDE7919E1814800E97F0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDE8219E1814900E97F0D /* CoreGraphics.framework in Frameworks */,
+				B2FCDE8419E1814900E97F0D /* UIKit.framework in Frameworks */,
+				B2FCDE8019E1814900E97F0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FCDE9A19E1814900E97F0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDE9F19E1814900E97F0D /* XCTest.framework in Frameworks */,
+				B2FCDEA119E1814900E97F0D /* UIKit.framework in Frameworks */,
+				B2FCDEA019E1814900E97F0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2FCDE7319E1814800E97F0D = {
+			isa = PBXGroup;
+			children = (
+				B2FCDE8519E1814900E97F0D /* iOSNotificationStyleAlert */,
+				B2FCDEA419E1814900E97F0D /* iOSNotificationStyleAlertTests */,
+				B2FCDE7E19E1814900E97F0D /* Frameworks */,
+				B2FCDE7D19E1814900E97F0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2FCDE7D19E1814900E97F0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDE7C19E1814900E97F0D /* iOSNotificationStyleAlert.app */,
+				B2FCDE9D19E1814900E97F0D /* iOSNotificationStyleAlertTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2FCDE7E19E1814900E97F0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDE7F19E1814900E97F0D /* Foundation.framework */,
+				B2FCDE8119E1814900E97F0D /* CoreGraphics.framework */,
+				B2FCDE8319E1814900E97F0D /* UIKit.framework */,
+				B2FCDE9E19E1814900E97F0D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2FCDE8519E1814900E97F0D /* iOSNotificationStyleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDEB419E1819E00E97F0D /* CustomAlertView */,
+				B2FCDE8E19E1814900E97F0D /* ADAppDelegate.h */,
+				B2FCDE8F19E1814900E97F0D /* ADAppDelegate.m */,
+				B2FCDE9119E1814900E97F0D /* Main.storyboard */,
+				B2FCDE9419E1814900E97F0D /* ADViewController.h */,
+				B2FCDE9519E1814900E97F0D /* ADViewController.m */,
+				B2FCDE9719E1814900E97F0D /* Images.xcassets */,
+				B2FCDE8619E1814900E97F0D /* Supporting Files */,
+			);
+			path = iOSNotificationStyleAlert;
+			sourceTree = "<group>";
+		};
+		B2FCDE8619E1814900E97F0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDE8719E1814900E97F0D /* iOSNotificationStyleAlert-Info.plist */,
+				B2FCDE8819E1814900E97F0D /* InfoPlist.strings */,
+				B2FCDE8B19E1814900E97F0D /* main.m */,
+				B2FCDE8D19E1814900E97F0D /* iOSNotificationStyleAlert-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2FCDEA419E1814900E97F0D /* iOSNotificationStyleAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDEAA19E1814900E97F0D /* iOSNotificationStyleAlertTests.m */,
+				B2FCDEA519E1814900E97F0D /* Supporting Files */,
+			);
+			path = iOSNotificationStyleAlertTests;
+			sourceTree = "<group>";
+		};
+		B2FCDEA519E1814900E97F0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDEA619E1814900E97F0D /* iOSNotificationStyleAlertTests-Info.plist */,
+				B2FCDEA719E1814900E97F0D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2FCDEB419E1819E00E97F0D /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B2FCDEB819E1825A00E97F0D /* ADCustomAlertViewController.h */,
+				B2FCDEB919E1825A00E97F0D /* ADCustomAlertViewController.m */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2FCDE7B19E1814800E97F0D /* iOSNotificationStyleAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FCDEAE19E1814900E97F0D /* Build configuration list for PBXNativeTarget "iOSNotificationStyleAlert" */;
+			buildPhases = (
+				B2FCDE7819E1814800E97F0D /* Sources */,
+				B2FCDE7919E1814800E97F0D /* Frameworks */,
+				B2FCDE7A19E1814800E97F0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSNotificationStyleAlert;
+			productName = iOSNotificationStyleAlert;
+			productReference = B2FCDE7C19E1814900E97F0D /* iOSNotificationStyleAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2FCDE9C19E1814900E97F0D /* iOSNotificationStyleAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FCDEB119E1814900E97F0D /* Build configuration list for PBXNativeTarget "iOSNotificationStyleAlertTests" */;
+			buildPhases = (
+				B2FCDE9919E1814900E97F0D /* Sources */,
+				B2FCDE9A19E1814900E97F0D /* Frameworks */,
+				B2FCDE9B19E1814900E97F0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2FCDEA319E1814900E97F0D /* PBXTargetDependency */,
+			);
+			name = iOSNotificationStyleAlertTests;
+			productName = iOSNotificationStyleAlertTests;
+			productReference = B2FCDE9D19E1814900E97F0D /* iOSNotificationStyleAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2FCDE7419E1814800E97F0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Aditya Deshmane";
+				TargetAttributes = {
+					B2FCDE9C19E1814900E97F0D = {
+						TestTargetID = B2FCDE7B19E1814800E97F0D;
+					};
+				};
+			};
+			buildConfigurationList = B2FCDE7719E1814800E97F0D /* Build configuration list for PBXProject "iOSNotificationStyleAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2FCDE7319E1814800E97F0D;
+			productRefGroup = B2FCDE7D19E1814900E97F0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2FCDE7B19E1814800E97F0D /* iOSNotificationStyleAlert */,
+				B2FCDE9C19E1814900E97F0D /* iOSNotificationStyleAlertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2FCDE7A19E1814800E97F0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDE9819E1814900E97F0D /* Images.xcassets in Resources */,
+				B2FCDE8A19E1814900E97F0D /* InfoPlist.strings in Resources */,
+				B2FCDE9319E1814900E97F0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FCDE9B19E1814900E97F0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDEA919E1814900E97F0D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2FCDE7819E1814800E97F0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDE8C19E1814900E97F0D /* main.m in Sources */,
+				B2FCDE9619E1814900E97F0D /* ADViewController.m in Sources */,
+				B2FCDE9019E1814900E97F0D /* ADAppDelegate.m in Sources */,
+				B2FCDEBA19E1825A00E97F0D /* ADCustomAlertViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FCDE9919E1814900E97F0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FCDEAB19E1814900E97F0D /* iOSNotificationStyleAlertTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2FCDEA319E1814900E97F0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2FCDE7B19E1814800E97F0D /* iOSNotificationStyleAlert */;
+			targetProxy = B2FCDEA219E1814900E97F0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2FCDE8819E1814900E97F0D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FCDE8919E1814900E97F0D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2FCDE9119E1814900E97F0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FCDE9219E1814900E97F0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2FCDEA719E1814900E97F0D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FCDEA819E1814900E97F0D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2FCDEAC19E1814900E97F0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2FCDEAD19E1814900E97F0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2FCDEAF19E1814900E97F0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Prefix.pch";
+				INFOPLIST_FILE = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2FCDEB019E1814900E97F0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Prefix.pch";
+				INFOPLIST_FILE = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B2FCDEB219E1814900E97F0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSNotificationStyleAlert.app/iOSNotificationStyleAlert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSNotificationStyleAlertTests/iOSNotificationStyleAlertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B2FCDEB319E1814900E97F0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSNotificationStyleAlert.app/iOSNotificationStyleAlert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSNotificationStyleAlert/iOSNotificationStyleAlert-Prefix.pch";
+				INFOPLIST_FILE = "iOSNotificationStyleAlertTests/iOSNotificationStyleAlertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2FCDE7719E1814800E97F0D /* Build configuration list for PBXProject "iOSNotificationStyleAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FCDEAC19E1814900E97F0D /* Debug */,
+				B2FCDEAD19E1814900E97F0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FCDEAE19E1814900E97F0D /* Build configuration list for PBXNativeTarget "iOSNotificationStyleAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FCDEAF19E1814900E97F0D /* Debug */,
+				B2FCDEB019E1814900E97F0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FCDEB119E1814900E97F0D /* Build configuration list for PBXNativeTarget "iOSNotificationStyleAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FCDEB219E1814900E97F0D /* Debug */,
+				B2FCDEB319E1814900E97F0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2FCDE7419E1814800E97F0D /* Project object */;
+}
