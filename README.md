@@ -96,9 +96,9 @@ ADCustomAlertViewController works on iOS 5.0 & above versions and is compatible 
 
 ### Other details
 
-XCode : Developed using 5.1.1
-Base sdk used while development : 7.0
-Testing : iOS: 6,7   Devices : iPad & 3.5, 4 inch iphones
+* XCode : Developed using 5.1.1
+* Base sdk used while development : 7.0
+* Testing : iOS: 6,7   Devices : iPad & 3.5, 4 inch iphones
 
 ---
 ---
