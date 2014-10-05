@@ -1,6 +1,8 @@
 iOSNotificationStyleAlert
 =========================
 
+![      ](\alertWithButtons.png "") ![      ](\alertWithoutButtons.png "") 
+
 
 Custom iOSNotificationStyleAlert. Beautiful, light and easy to use custom alert.
 
