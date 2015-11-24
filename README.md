@@ -1,23 +1,45 @@
 iOSNotificationStyleAlert
 =========================
+Alert with notificatin style animation
 
 ![      ](\iOSNotifStyleAlert.gif "") 
 
+---
+---
 
-Custom iOSNotificationStyleAlert. Beautiful, light and easy to use custom alert.
+### Features
 
-
-
-* Completely different custom alert
-* Easy to modify as per theme, easy to modify code
+* Light and easy to use custom alert.
+* Easy to modify code
+* Easy to setup color theme
+* Many customisation parameters
 
 <em>This UI control can be used on all iPhones, iPods & iPads running iOS 5.0 and above.</em>
 
 ---
 ---
 
-### Adding to your project
+### Customisation parameters
 
+```
+#define VIEW_HEIGHT         130 //view height (min possible height is 100 with one line for message label)
+#define VIEW_BG_COLOR       [UIColor whiteColor]
+
+#define TITLE_TEXT_COLOR    [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
+#define MESSAGE_TEXT_COLOR  [UIColor darkGrayColor]
+
+#define BTN_FONT            [UIFont fontWithName:@"Helvetica" size:13]
+#define BTN_BG_COLOR        [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
+
+#define BOTTOM_LINE_COLOR   [UIColor colorWithRed:235.0/255 green:255.0/255 blue:255.0/255 alpha:1]
+
+```
+<em>This UI control can be used on all iPhones, iPods & iPads running iOS 5.0 and above.</em>
+
+---
+---
+
+### Adding to your project
 
 * Add Follwing two files to your project
 
@@ -29,7 +51,7 @@ Custom iOSNotificationStyleAlert. Beautiful, light and easy to use custom alert.
 ---
 ---
 
-### How to use
+### How to use ?
 
 #### Sample Codes
 
@@ -46,17 +68,16 @@ Custom iOSNotificationStyleAlert. Beautiful, light and easy to use custom alert.
 
 
 //3. HANDLE DELEGATE METHODS
-#pragma mark -
-#pragma mark ADCustomAlertDelegate Methods
+#pragma mark - ADCustomAlertDelegate Methods
 
-- (void)customAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle
+- (void)adCustomAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle
 {
-    NSLog(@"customAlertView clickedButtonWithTitle: %@",strTitle);
+     NSLog(@"ADCustomAlertView :: clickedButtonWithTitle: %@",strTitle);
 }
 
-- (void)customAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert
+- (void)adCustomAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert
 {
-    NSLog(@"customAlertViewTapped");
+    NSLog(@"ADCustomAlertView :: AlertViewTapped");
 }
 
 //4. CREATING INSTANCE OF CONTROL
@@ -89,25 +110,44 @@ Custom iOSNotificationStyleAlert. Beautiful, light and easy to use custom alert.
 
 ### Requirements
 
-ADCustomAlertViewController works on iOS 5.0 & above versions and is compatible with ARC projects. There is no need of other frameworks/libraries
+* ADPageControl works on iOS 5.0 & above versions and is compatible with ARC projects. 
+* There is no need of other frameworks/libraries.
 
 ---
 ---
 
 ### Other details
 
-* XCode : Developed using 5.1.1
-* Base sdk used while development : 7.0
-* Testing : iOS: 6,7   Devices : iPad & 3.5, 4 inch iphones
+* Compatible devices : iPhone, iPad, iPod
+* Testing : iOS 6, 7, 8 & 9
 
 ---
 ---
 
-### Todo
+### TODO
 
-* More animations
-* Auto height adjustments
-* Auto hide option
+* Component polishing
+* More generalizations
 
 ---
 ---
+## License
+
+iOSNotificationStyleAlert is available under the WTFPL license. 
+
+```
+//    DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+//    Version 2, December 2004
+//
+//    Copyright (C) 2014 Aditya Deshmane
+//
+//    Everyone is permitted to copy and distribute verbatim or modified
+//    copies of this license document, and changing it is allowed as long
+//    as the name is changed.
+//
+//    DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+//    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+//
+//    0. You just DO WHAT THE FUCK YOU WANT TO.
+
+```
