@@ -34,7 +34,7 @@
 {
     //1. SIMPLE ALERT
     _customAlert = [[ADCustomAlertViewController alloc] initWithTitle:@"Custom Alert Title"
-                                                              message:@"This is small text message, just to show how this notification style alert looks !!!"
+                                                              message:@"This is small text message for demonstration of ADCustomAlertViewController !!!"
                                                              delegate:self
                                                     arrayButtonTitles:[[NSArray alloc] initWithObjects: @"OK",@"Cancel",nil]];
     
@@ -63,8 +63,7 @@
     _btnShowSimpleAlert.alpha = 0.5;
 }
 
-#pragma mark -
-#pragma mark ADCustomAlertDelegate Methods
+#pragma mark - ADCustomAlertDelegate Methods
 
 - (void)customAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle
 {
