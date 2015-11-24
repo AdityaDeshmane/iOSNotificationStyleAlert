@@ -37,38 +37,42 @@
  
 *************************************************/
 
-#define VIEW_HEIGHT 130 //view height (min possible height is 100 with one line for message label)
-#define VIEW_BG_COLOR [UIColor whiteColor]
+#define VIEW_HEIGHT         130 //view height (min possible height is 100 with one line for message label)
+#define VIEW_BG_COLOR       [UIColor whiteColor]
 
-#define TITLE_TEXT_COLOR [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
-#define MESSAGE_TEXT_COLOR [UIColor darkGrayColor]
+#define TITLE_TEXT_COLOR    [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
+#define MESSAGE_TEXT_COLOR  [UIColor darkGrayColor]
 
-#define BTN_FONT [UIFont fontWithName:@"Helvetica" size:13]
-#define BTN_BG_COLOR [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
+#define BTN_FONT            [UIFont fontWithName:@"Helvetica" size:13]
+#define BTN_BG_COLOR        [UIColor colorWithRed:64.0/255 green:224.0/255 blue:208.0/255 alpha:1]
 
-#define BOTTOM_LINE_COLOR [UIColor colorWithRed:235.0/255 green:255.0/255 blue:255.0/255 alpha:1]
+#define BOTTOM_LINE_COLOR   [UIColor colorWithRed:235.0/255 green:255.0/255 blue:255.0/255 alpha:1]
 
 /************************************************/
 
 
 @interface ADCustomAlertViewController ()
 {
-    UILabel *_lblTitle;
-    UILabel *_lblMessage;
-    BOOL _bIsShowingAlert;
-    CGRect _viewFrame;
-    CGRect _windowFrame;
     
-    UIButton *_btn0;
-    UIButton *_btn1;
-    UIButton *_btn2;
+    //Alert subviews
+    UILabel     *_lblTitle;
+    UILabel     *_lblMessage;
+    UIButton    *_btn0;
+    UIButton    *_btn1;
+    UIButton    *_btn2;
     
-    NSString *_strTitle;
-    NSString *_strMessage;
-    NSArray *_arrButtonTitles;
-    id <ADCustomAlertDelegate> _delegateCustomAlert;
+    //Initialzation parameters
+    NSString    *_strTitle;
+    NSString    *_strMessage;
+    NSArray     *_arrButtonTitles;
     
-    UITapGestureRecognizer *_tapGestureRecognizer;
+    
+    BOOL        _bIsShowingAlert;
+    CGRect      _viewFrame;
+    CGRect      _windowFrame;
+    
+    __weak id <ADCustomAlertDelegate>   _delegateCustomAlert;
+    UITapGestureRecognizer              *_tapGestureRecognizer;
 }
 
 -(void) setupView;
@@ -85,22 +89,24 @@
 
 @implementation ADCustomAlertViewController
 
-#pragma mark -
-#pragma mark UIViewController
+#pragma mark - UIViewController
 
-- (id)initWithTitle:(NSString*) strTitle message:(NSString *)strMessage delegate:(id)delegate arrayButtonTitles:(NSArray *) arrButtonTitles
+- (id)initWithTitle:(NSString*) strTitle
+            message:(NSString *) strMessage
+           delegate:(id) delegate
+  arrayButtonTitles:(NSArray *) arrButtonTitles
 {
     self = [super init];
 
     if (self)
     {
-        UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
-       _windowFrame = window.screen.bounds;
+        UIWindow *window =      [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+        _windowFrame =          window.screen.bounds;
      
-        _strTitle = strTitle;
-        _strMessage = strMessage;
-        _arrButtonTitles = arrButtonTitles;
-        _delegateCustomAlert = delegate;
+        _strTitle =             strTitle;
+        _strMessage =           strMessage;
+        _arrButtonTitles =      arrButtonTitles;
+        _delegateCustomAlert =  delegate;
         
         [self setupView];
         [self setupLabels];
@@ -111,21 +117,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark -
-#pragma mark UIComponent Setup
+#pragma mark - UIComponent Setup
 
 -(void) setupView
 {
@@ -136,28 +128,32 @@
 
 -(void) setupLabels
 {
-    _lblTitle = [[UILabel alloc] init];
-    _lblTitle.text = _strTitle;
-    _lblTitle.font = [UIFont fontWithName:@"Helvetica" size:14];
-    _lblTitle.textColor = TITLE_TEXT_COLOR;
+    _lblTitle =                 [[UILabel alloc] init];
+    _lblTitle.text =            _strTitle;
+    _lblTitle.font =            [UIFont fontWithName:@"Helvetica" size:14];
+    _lblTitle.textColor =       TITLE_TEXT_COLOR;
     _lblTitle.backgroundColor = [UIColor clearColor];
-    _lblTitle.textAlignment = NSTextAlignmentCenter;
-    _lblTitle.frame = CGRectMake(8, 20, _windowFrame.size.width-8*2, 20);
+    _lblTitle.textAlignment =   NSTextAlignmentCenter;
+    _lblTitle.frame =           CGRectMake(8, 20, _windowFrame.size.width-8*2, 20);
+    
     [self.view addSubview:_lblTitle];
     
-    _lblMessage = [[UILabel alloc] init];
-    _lblMessage.text = _strMessage;
-    _lblMessage.font = [UIFont fontWithName:@"Helvetica" size:12];
+    _lblMessage =               [[UILabel alloc] init];
+    _lblMessage.text =          _strMessage;
+    _lblMessage.font =          [UIFont fontWithName:@"Helvetica" size:12];
     _lblMessage.numberOfLines = 0;
     _lblMessage.textAlignment = NSTextAlignmentCenter;
-    _lblMessage.textColor = MESSAGE_TEXT_COLOR;
+    _lblMessage.textColor =     MESSAGE_TEXT_COLOR;
     _lblMessage.backgroundColor = [UIColor clearColor];
-    _lblMessage.frame = CGRectMake(8, 42, _windowFrame.size.width -8*2, VIEW_HEIGHT - 76);
+    _lblMessage.frame =         CGRectMake(8, 42, _windowFrame.size.width -8*2, VIEW_HEIGHT - 76);
+    
     [self.view addSubview:_lblMessage];
 }
 
 -(void) setupButtons
 {
+    //TODO: Remove this hardcoding of frames
+    
     if(_arrButtonTitles.count == 0)//No buttons use tap to dismiss alert
     {
         _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
@@ -165,31 +161,34 @@
     }
     else if(_arrButtonTitles.count == 1)
     {
-        _btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn0.tag = 0;
+        _btn0 =                 [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn0.tag =             0;
         _btn0.titleLabel.font = BTN_FONT;
-        _btn0.frame  = CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn0.frame  =          CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn0.backgroundColor = BTN_BG_COLOR;
+        
         [_btn0 setTitle:[_arrButtonTitles objectAtIndex:0] forState:UIControlStateNormal];
         [_btn0 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn0];
     }
     else if(_arrButtonTitles.count == 2)
     {
-        _btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn0.tag = 0;
+        _btn0 =                 [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn0.tag =             0;
         _btn0.titleLabel.font = BTN_FONT;
-        _btn0.frame  = CGRectMake(_windowFrame.size.width/2-BTN_WIDTH -BTN_SPACE/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn0.frame  =          CGRectMake(_windowFrame.size.width/2-BTN_WIDTH -BTN_SPACE/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn0.backgroundColor = BTN_BG_COLOR;
+        
         [_btn0 setTitle:[_arrButtonTitles objectAtIndex:0] forState:UIControlStateNormal];
         [_btn0 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn0];
         
         _btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn1.tag = 1;
+        _btn1.tag =             1;
         _btn1.titleLabel.font = BTN_FONT;
-        _btn1.frame  = CGRectMake(_windowFrame.size.width/2+BTN_SPACE/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn1.frame  =          CGRectMake(_windowFrame.size.width/2+BTN_SPACE/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn1.backgroundColor = BTN_BG_COLOR;
+        
         [_btn1 setTitle:[_arrButtonTitles objectAtIndex:1] forState:UIControlStateNormal];
         [_btn1 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn1];
@@ -197,28 +196,31 @@
     else if (_arrButtonTitles.count == 3)
     {
         _btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn0.tag = 0;
+        _btn0.tag =             0;
         _btn0.titleLabel.font = BTN_FONT;
-        _btn0.frame  = CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2 -BTN_SPACE-BTN_WIDTH, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn0.frame  =          CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2 -BTN_SPACE-BTN_WIDTH, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn0.backgroundColor = BTN_BG_COLOR;
+        
         [_btn0 setTitle:[_arrButtonTitles objectAtIndex:0] forState:UIControlStateNormal];
         [_btn0 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn0];
         
-        _btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn1.tag = 1;
+        _btn1 =                 [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn1.tag =             1;
         _btn1.titleLabel.font = BTN_FONT;
-        _btn1.frame  = CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn1.frame  =          CGRectMake(_windowFrame.size.width/2-BTN_WIDTH/2, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn1.backgroundColor = BTN_BG_COLOR;
+        
         [_btn1 setTitle:[_arrButtonTitles objectAtIndex:1] forState:UIControlStateNormal];
         [_btn1 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn1];
         
-        _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn2.tag = 2;
+        _btn2 =                 [UIButton buttonWithType:UIButtonTypeCustom];
+        _btn2.tag =             2;
         _btn2.titleLabel.font = BTN_FONT;
-        _btn2.frame  = CGRectMake(_windowFrame.size.width/2+BTN_WIDTH/2+BTN_SPACE, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
+        _btn2.frame  =          CGRectMake(_windowFrame.size.width/2+BTN_WIDTH/2+BTN_SPACE, BTN_Y_POS, BTN_WIDTH, BTN_HEIGHT);
         _btn2.backgroundColor = BTN_BG_COLOR;
+        
         [_btn2 setTitle:[_arrButtonTitles objectAtIndex:2] forState:UIControlStateNormal];
         [_btn2 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_btn2];
@@ -227,9 +229,10 @@
 
 -(void) setupBottomLine
 {
-    UIView *bottomBorderView = [[UIView alloc] init];
-    bottomBorderView.frame = CGRectMake(0, VIEW_HEIGHT-1, _windowFrame.size.width, 1);
-    bottomBorderView.backgroundColor = BOTTOM_LINE_COLOR;
+    UIView *bottomBorderView =          [[UIView alloc] init];
+    bottomBorderView.frame =            CGRectMake(0, VIEW_HEIGHT-1, _windowFrame.size.width, 1);
+    bottomBorderView.backgroundColor =  BOTTOM_LINE_COLOR;
+    
     [self.view addSubview:bottomBorderView];
 }
 
@@ -276,10 +279,11 @@
     _bIsShowingAlert = YES;
     
     //set view ouside of window
-    CGRect rect = CGRectMake(0, -VIEW_HEIGHT, _windowFrame.size.width, VIEW_HEIGHT);
-    self.view.frame = rect;
-    self.view.alpha = 0.4;
-    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    CGRect rect =       CGRectMake(0, -VIEW_HEIGHT, _windowFrame.size.width, VIEW_HEIGHT);
+    self.view.frame =   rect;
+    self.view.alpha =   0.4;
+    UIWindow *window =  [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    
     [window addSubview:self.view];
 
 
