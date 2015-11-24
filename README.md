@@ -34,7 +34,6 @@ Alert with notificatin style animation
 #define BOTTOM_LINE_COLOR   [UIColor colorWithRed:235.0/255 green:255.0/255 blue:255.0/255 alpha:1]
 
 ```
-<em>This UI control can be used on all iPhones, iPods & iPads running iOS 5.0 and above.</em>
 
 ---
 ---
