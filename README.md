@@ -1,6 +1,6 @@
 iOSNotificationStyleAlert
 =========================
-Alert with notificatin style animation
+Notification Style Alert
 
 ![      ](\iOSNotifStyleAlert.gif "") 
 
