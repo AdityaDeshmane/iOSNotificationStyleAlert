@@ -11,11 +11,12 @@
 
 @interface ADViewController ()<ADCustomAlertDelegate>
 {
-    ADCustomAlertViewController *_customAlert;
-    ADCustomAlertViewController *_customAlertWithoutButtons;
+    ADCustomAlertViewController     *_customAlert;
+    ADCustomAlertViewController     *_customAlertWithoutButtons;
 }
-@property (strong, nonatomic) IBOutlet UIButton *btnShowSimpleAlert;
-@property (strong, nonatomic) IBOutlet UIButton *btnShowButtonlessAlert;
+
+@property (strong, nonatomic) IBOutlet UIButton     *btnShowSimpleAlert;        //With buttons
+@property (strong, nonatomic) IBOutlet UIButton     *btnShowButtonlessAlert;    //Without butttons
 
 @end
 
@@ -24,28 +25,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 
-    //SIMPLE ALERT
+    [self setupCustomAlerts];
+}
+
+
+-(void)setupCustomAlerts
+{
+    //1. SIMPLE ALERT
     _customAlert = [[ADCustomAlertViewController alloc] initWithTitle:@"Custom Alert Title"
                                                               message:@"This is small text message, just to show how this notification style alert looks !!!"
                                                              delegate:self
                                                     arrayButtonTitles:[[NSArray alloc] initWithObjects: @"OK",@"Cancel",nil]];
     
-    //BUTTONLESS ALERT
+    //2. BUTTONLESS ALERT
     _customAlertWithoutButtons = [[ADCustomAlertViewController alloc] initWithTitle:@"Alert Without Buttons"
                                                                             message:@"Tap this view and it will disapper !!!"
                                                                            delegate:self
                                                                   arrayButtonTitles:nil];
-
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-  
 }
 
 - (IBAction)showAlert:(id)sender//SIMPLE ALERT
@@ -74,7 +71,7 @@
     //ReEnable
     _btnShowButtonlessAlert.enabled = YES;
     _btnShowButtonlessAlert.alpha = 1.0;
-    NSLog(@"customAlertView clickedButtonWithTitle: %@",strTitle);
+     NSLog(@"ADCustomAlertView :: clickedButtonWithTitle: %@",strTitle);
 }
 
 - (void)customAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert
@@ -82,7 +79,7 @@
     //ReEnable
     _btnShowSimpleAlert.enabled = YES;
     _btnShowSimpleAlert.alpha = 1.0;
-    NSLog(@"customAlertViewTapped");
+    NSLog(@"ADCustomAlertView :: AlertViewTapped");
 }
 
 @end
