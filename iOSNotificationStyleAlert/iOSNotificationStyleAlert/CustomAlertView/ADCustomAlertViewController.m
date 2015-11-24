@@ -100,6 +100,8 @@
 
     if (self)
     {
+        NSLog(@"ADCustomAlertView :: init");
+        
         UIWindow *window =      [[[UIApplication sharedApplication] windows] objectAtIndex:0];
         _windowFrame =          window.screen.bounds;
      
@@ -276,6 +278,9 @@
     if (_bIsShowingAlert)
         return;
     
+    NSLog(@"ADCustomAlertView :: show");
+
+    
     _bIsShowingAlert = YES;
     
     //set view ouside of window
@@ -317,6 +322,9 @@
     
     if(_bIsShowingAlert == NO)
         return;
+    
+    NSLog(@"ADCustomAlertView :: hide");
+
     
     _bIsShowingAlert = NO;
 
