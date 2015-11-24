@@ -65,7 +65,7 @@
 
 #pragma mark - ADCustomAlertDelegate Methods
 
-- (void)customAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle
+- (void)adCustomAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle
 {
     //ReEnable
     _btnShowButtonlessAlert.enabled = YES;
@@ -73,7 +73,7 @@
      NSLog(@"ADCustomAlertView :: clickedButtonWithTitle: %@",strTitle);
 }
 
-- (void)customAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert
+- (void)adCustomAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert
 {
     //ReEnable
     _btnShowSimpleAlert.enabled = YES;

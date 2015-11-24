@@ -31,10 +31,10 @@
 @optional
 
 //callback provides alert instance and button title info
-- (void)customAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle;
+- (void)adCustomAlertView:(ADCustomAlertViewController *) adCustomAlert clickedButtonWithTitle:(NSString*) strTitle;
 
 //get called only if no buttonTitle array provided (buttonless alert)
-- (void)customAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert;
+- (void)adCustomAlertViewTapped:(ADCustomAlertViewController *) adCustomAlert;
 
 @end
 

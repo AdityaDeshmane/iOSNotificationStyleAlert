@@ -245,9 +245,9 @@
 {
     [self hide];
     
-    if ( _delegateCustomAlert && [_delegateCustomAlert respondsToSelector:@selector(customAlertViewTapped:)])
+    if ( _delegateCustomAlert && [_delegateCustomAlert respondsToSelector:@selector(adCustomAlertViewTapped:)])
     {
-        [_delegateCustomAlert customAlertViewTapped:self];
+        [_delegateCustomAlert adCustomAlertViewTapped:self];
     }
 }
 
@@ -255,10 +255,10 @@
 {
     [self hide];
     
-    if ( _delegateCustomAlert && [_delegateCustomAlert respondsToSelector:@selector(customAlertView:clickedButtonWithTitle:)])
+    if ( _delegateCustomAlert && [_delegateCustomAlert respondsToSelector:@selector(adCustomAlertView:clickedButtonWithTitle:)])
     {
         UIButton *btn = (UIButton*)sender;
-        [_delegateCustomAlert customAlertView:self clickedButtonWithTitle:[_arrButtonTitles objectAtIndex:btn.tag]];
+        [_delegateCustomAlert adCustomAlertView:self clickedButtonWithTitle:[_arrButtonTitles objectAtIndex:btn.tag]];
     }
 }
 
