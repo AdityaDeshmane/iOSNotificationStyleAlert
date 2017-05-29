@@ -2,7 +2,7 @@ iOSNotificationStyleAlert
 =========================
 Notification Style Alert
 
-![      ](\iOSNotifStyleAlert.gif "") 
+![      ](/iOSNotifStyleAlert.gif "") 
 
 ---
 ---
